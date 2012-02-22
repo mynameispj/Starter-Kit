@@ -1,0 +1,109 @@
+@import "bootstrap.less"; 
+
+.background-img (@imgURL, @x: left, @y: top, @bgrepeat: repeat) {
+	background: transparent url(@imgURL) @x @y @bgrepeat;
+	}
+
+.sprite-link (@imgURL) {
+	display: block; 
+	.background-img(@imgURL); 
+	position: relative; 
+	text-indent: -9999px; 
+	float: left; 
+	}
+	
+.center {
+	display: block; 
+	margin: 0 auto; 
+	float: none; 
+	}	
+
+a#brand {
+	.sprite-link('_/css/i/brite-logo.png'); 
+	width: 269px; 
+	height: 62px; 
+	}
+
+html, body {
+	height: 100%;
+	}
+
+body {
+	.background-img('_/css/i/bg-large-img.jpg',center,top,no-repeat); 
+	}
+
+.wrapper { 
+	width: 1024px; 
+	.center; 
+	.clearfix();
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+	}
+
+
+/* Navigation / Menu
+-------------------------------------------------------------------------------*/
+
+header, 
+article {
+	.clearfix(); 
+	}
+
+nav {
+	float: right; 
+	position: relative; 
+	}
+	
+.nav-pills > li > a {
+	color: #000; 
+	text-decoration: none;
+	font-weight: bold;  
+	}	
+	
+.help {
+	.alert; 
+	.alert-success; 
+	position: absolute;
+	right: 0; 
+	top: 0; 
+	padding: 4px 7px;
+	border-radius: 65px;
+	margin-top: -10px; 
+	cursor: pointer; 
+	font-size: 14px; 
+	line-height: normal; 
+	font-weight: bold; 
+	}
+	
+/* Main Content
+-------------------------------------------------------------------------------*/
+	
+.welcome {
+	width: 60%; 
+	position: relative; 
+	float: right; 
+	font-size: 30px;
+	line-height: 45px;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 10px 18px;
+	border-radius: 5px;
+	border: white;
+	margin-top: 50px;
+	}	
+	
+	
+	
+/* Footer
+-------------------------------------------------------------------------------*/
+	
+footer, .push {
+	height: 142px; /* .push must be the same height as .footer */
+}	
+	
+footer {	
+	.clearfix();
+	width: 100%; 
+	background: #000; 
+	} 	
