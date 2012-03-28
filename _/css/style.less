@@ -1,9 +1,18 @@
 @import "less/bootstrap.less";
 
-/* Utility Functions
+/* Utility Functions, Classes and Variables
 -------------------------------------------------------------------------------*/
+
+@initialWidth: 1024px; 
 
 .w-h(@width,@height) {
 	width: @width; 
 	height: @height; 
+}
+
+.content {
+	width: @initialWidth; 
+	position: relative; 
+	margin: 0 auto; 
+	.clearfix(); 
 }
