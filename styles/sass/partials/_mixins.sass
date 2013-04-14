@@ -30,3 +30,15 @@ $base-font-size: 16px
 		border-top: $size solid transparent
 		border-bottom: $size solid transparent
 		border-right: $size solid $color
+
+
+
+=clearfix
+	&:after 
+		content: "."
+		display: block
+		height: 0
+		clear: both
+		visibility: hidden
+
+	zoom: 1
